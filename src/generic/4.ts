@@ -6,11 +6,11 @@ interface PageDetails {
   title: string;
 }
 
-class Component<T extends Record<string, any>> {
+class Component<T> {
   constructor(public props: T) {}
 }
 
-class Page<T extends PageDetails> extends Component<T> {
+class Page extends Component<PageDetails> {
   pageInfo() {
     console.log(this.props.title);
   }
